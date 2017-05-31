@@ -19,38 +19,38 @@ $(document).ready(function() {
 
 
 
-
 	// Generates the Numbers We Need for the Game
 	function numGen() {
 
 		// Gets Random Number For Game Between 20 - 120
 		function getRandomNumber() {
-			goalNumber = Math.floor(Math.random() * 100 + 20);
-			console.log(goalNumber);
+		goalNumber = Math.floor(Math.random() * 100 + 20);
+		console.log(goalNumber);
+		$('#goal-number').html(goalNumber);
 		}
 
-		// Gets Value Between 1 - 3 For Gem One
+		// Gives GemOne Value Between 1 - 3 For Gem One
 		function getGemOneValue() {
-			gemOneValue = Math.floor(Math.random() * 3 + 1);
-			console.log(gemOneValue);
+		gemOneValue = Math.floor(Math.random() * 3 + 1);
+		console.log(gemOneValue);
 		}
 
-		// Gets Value Between 4 - 6 For Gem Two
+		// Gives GemTwo Value Between 4 - 6 For Gem Two
 		function getGemTwoValue() {
-			gemTwoValue = Math.floor(Math.random() * 3 + 4);
-			console.log(gemTwoValue);
+		gemTwoValue = Math.floor(Math.random() * 3 + 4);
+		console.log(gemTwoValue);
 		}
 
-		// Gets Value Between 7 - 9 For Gem Three
+		// Gives GemThree Value Between 7 - 9 For Gem Three
 		function getGemThreeValue() {
-			gemThreeValue = Math.floor(Math.random() * 3 + 7);
-			console.log(gemThreeValue);
+		gemThreeValue = Math.floor(Math.random() * 3 + 7);
+		console.log(gemThreeValue);
 		}
 
-		// Gets Value Between 10 - 12 Gem Four
+		// Gives GemFour Value Between 10 - 12 Gem Four
 		function getGemFourValue() {
-			gemFourValue = Math.floor(Math.random() * 3 + 10);
-			console.log(gemFourValue);
+		gemFourValue = Math.floor(Math.random() * 3 + 10);
+		console.log(gemFourValue);
 		}
 
 		getRandomNumber();
@@ -58,8 +58,9 @@ $(document).ready(function() {
 		getGemTwoValue();
 		getGemThreeValue();
 		getGemFourValue();
-
 	}
+
+	numGen();
 
 
 	// Adds Value of Gem One to the Total User Score
@@ -68,6 +69,7 @@ $(document).ready(function() {
 		userScore = userScore + gemOneValue;
 		console.log(userScore);
 		$('#user-score').html(userScore);
+		checkScore();
 	});
 
 	// Adds Value of Gem Two to the Total User Score
@@ -76,6 +78,7 @@ $(document).ready(function() {
 		userScore = userScore + gemTwoValue;
 		console.log(userScore);
 		$('#user-score').html(userScore);
+		checkScore();
 	});
 
 	// Adds Value of Gem Three to the Total User Score
@@ -84,6 +87,7 @@ $(document).ready(function() {
 		userScore = userScore + gemThreeValue;
 		console.log(userScore);
 		$('#user-score').html(userScore);
+		checkScore();
 	});
 
 	// Adds Value of Gem Four to the Total User Score
@@ -92,30 +96,35 @@ $(document).ready(function() {
 		userScore = userScore + gemFourValue;
 		console.log(userScore);
 		$('#user-score').html(userScore);
+		checkScore();
 	});
 
 
-	numGen();
-
-
-	
-	if (userScore === goalNumber) {
-		totalWins = totalWins++;
-		console.log(totalWins);
-		$('#user-wins').html(totalWins);
-	}
-
-
-	if (userScore > goalNumber) {
-		totalLosses++;
-		console.log(totalLosses);
-		$('#total-losses').html(totalLosses);
+	// Resets User Score and Generates New Numbers
+	// at the Beginning of a New Game
+	function reset() {
+		userScore = 0;
+		$('#user-score').html(userScore);
+		numGen();
 	}
 	
 
-
-	$('#goal-number').html(goalNumber);
-	$('#user-wins').html(totalWins);
-
+	// Checks the User Score Against the Goal Number
+	function checkScore() {
+		if (userScore === goalNumber) {
+			gameWinner.play();
+			totalWins++;
+			console.log(totalWins);
+			$('#user-wins').html(totalWins);
+			reset();
+		}
+		if (userScore > goalNumber) {
+			gameLoser.play();
+			totalLosses++;
+			console.log(totalLosses);
+			$('#user-losses').html(totalLosses);
+			reset();
+		}
+	}
 
 });
