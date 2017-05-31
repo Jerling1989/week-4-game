@@ -1,0 +1,9 @@
+// Create variables for game
+//-- goalNumber, userScore, totalWins, totalLosses, gemOneValue, gemTwoValue, gemThreeValue, gemFourValue
+
+//Create functions
+//-- Generate random goal number between 19 - 120
+//-- Generate gem values between 1 - 12
+//-- Add value of gem clicked to userScore 
+//---- If userScore get matched to goalNumber totalWins++
+//---- If userScore goes over goalNumber totalLosses++
