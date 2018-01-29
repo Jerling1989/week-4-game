@@ -1,41 +1,52 @@
 <!DOCTYPE html>
 <html lang="en_US">
 	<head>
+		<!-- PAGE TITLE -->
 		<title>Crystal Collector</title>
 
-		<!-- favicon -->
+		<!-- FAVICON -->
 		<link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
 
-		<!-- CSS Reset -->
+		<!-- CSS RESET -->
 		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 
-		<!-- Bootstrap CDN Link -->
+		<!-- BOOTSTRAP CDN LINK -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-		<!-- jQuery CDN Link -->
+		<!-- JQUERY CDN LINK -->
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js" 
 		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   		crossorigin="anonymous"></script>
 
-  		<!-- MOBILE RESPONSIVE -->
-  		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- MOBILE RESPONSIVE VIEWPORT -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	</head>
 
 	<body>
 
-		<!-- HEADER -->
+		<!-- PAGE HEADER -->
 		<div class="row">
+			<!-- HEADER MARGIN -->
 			<div class="col-lg 1 col-md-1 col-sm-1 col-xs-1">
 			</div>
+			<!-- END HEADER MARGIN -->
+
+			<!-- HEADER CONTENT COLUMN -->
 			<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				<!-- BOOTSTRAP JUMBOTRON -->
 				<div class="jumbotron text-center">
+					<!-- GAME TITLE -->
 					<h1>Crystal Collector</h1>
 					<br>
-
+					<!-- GAME INSTRUCTIONS -->
 					<div class="row">
+						<!-- MARGIN -->
 						<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
 						</div>
+						<!-- END MARGIN -->
+
+						<!-- MAIN INSTRUCTION CONTENT -->
 						<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
 							<p>
 								You Will be Given a Random Goal Number at the Start of the Game. Each of the Crystals Below Has a Value That Will be Added to Your Total Score.
@@ -47,22 +58,35 @@
 								The Value of Each Crystal is Hidden Until You Click on it to Find Out. Each Time a New Game Starts the Crystals Will be Given New Values.
 							</p>
 						</div>
+						<!-- END MAIN INSTRUCTION CONTENT -->
+
+						<!-- MARGIN -->
 						<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
 						</div>
+						<!-- END MARGIN -->
 					</div>
-
+					<!-- END GAME INSTRUCTIONS -->
 				</div>
+				<!-- END BOOTSTRAP JUMBOTRON -->
 			</div>
+			<!-- END HEADER CONTENT COLUMN -->
+
+			<!-- HEADER MARGIN -->
 			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
 			</div>
+			<!-- END HEADER MARGIN -->
 		</div>
+		<!-- END PAGE HEADER -->
 
 
-		<!-- WINS/LOSSES -->
+		<!-- WINS/LOSSES DIV -->
 		<div class="row">
+			<!-- MARGIN -->
 			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
 			</div>
+			<!-- END MARGIN -->
 
+				<!-- USER WINS PANEL -->
 				<div class="col-lg 5 col-md-5 col-sm-5 col-xs-5">
 					<div class="panel panel-info">
 						<!-- TOTAL USER WINS -->
@@ -72,7 +96,9 @@
 	  				</div>
 					</div>
 				</div>
+				<!-- END USER WINS PANEL -->
 
+				<!-- USER LOSSES PANEL -->
 				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
 					<div class="panel panel-info">
 						<!-- TOTAL USER LOSSES -->
@@ -82,17 +108,25 @@
 	  				</div>
 					</div>
 				</div>
+				<!-- END USER LOSSES PANEL -->
 
+			<!-- MARGIN -->
 			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
 			</div>
+			<!-- END MARGIN -->
 		</div>
+		<!-- END WINS/LOSSES DIV -->
 
 
-		<!-- NUMBER GOAL/USER SCORE -->
+
+		<!-- NUMBER GOAL/USER SCORE DIV -->
 		<div class="row">
+			<!-- MARGIN -->
 			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
 			</div>
+			<!-- END MARGIN -->
 
+				<!-- GOAL NUMBER PANEL -->
 				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
 					<div class="panel panel-danger">
 						<!-- RANDOM GOAL NUMBER -->
@@ -102,7 +136,9 @@
 	  				</div>
 					</div>
 				</div>
+				<!-- END GOAL NUMBER PANEL -->
 
+				<!-- CURRENT USER SCORE PANNEL -->
 				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
 					<div class="panel panel-danger">
 						<!-- USER SCORE COUNTER -->
@@ -112,16 +148,26 @@
 	  				</div>
 					</div>
 				</div>
+				<!-- END CURRENT USER SCORE PANEL -->
 
+			<!-- MARGIN -->
 			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
 			</div>
+			<!-- END MARGIN -->
 		</div>
+		<!-- END NUMBER GOAL/USER SCORE DIV -->
 
 		
+
 		<!-- GAME CRYSTALS -->
 		<div class="row">
+
+			<!-- MARGIN -->
 			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
 			</div>
+			<!-- END MARGIN -->
+
+			<!-- GEM BUTTON ROW -->
 			<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
 
 				<!-- GEM ONE -->
@@ -130,31 +176,45 @@
 			      <img src="assets/images/gem_1.png" alt="Ruby">
 			    </a>
 		  	</div>
+				<!-- END GEM ONE -->
+
 		  	<!-- GEM TWO -->
 		  	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
 			    <a class="thumbnail" id="gem-two">
 			      <img src="assets/images/gem_2.png" alt="Diamond">
 			    </a>
 		  	</div>
+				<!-- END GEM TWO -->
+
 		  	<!-- GEM THREE -->
 		  	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
 			    <a class="thumbnail" id="gem-three">
 			      <img src="assets/images/gem_3.png" alt="Topaz">
 			    </a>
 		  	</div>
+		  	<!-- END GEM THREE -->
+
 		  	<!-- GEM FOUR -->
 		  	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
 			    <a class="thumbnail" id="gem-four">
 			      <img src="assets/images/gem_4.png" alt="Emerald">
 			    </a>
 		  	</div>
+		  	<!-- END GEM FOUR -->
 
 	  	</div>
+	  	<!--  END GEM BUTTON ROW -->
+
+	  	<!-- MARGIN -->
 	  	<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
 			</div>
+			<!-- END MARGIN -->
 		</div>
+		<!-- END GAME CRYSTALS -->
 
-		<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+	<!-- GAME JS LINK -->
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
 	</body>
 
 </html>
