@@ -1,5 +1,7 @@
+// RUN CODE WHEN DOCUMENT IS LOADED
 $(document).ready(function() {
 
+	// GAME VARIABLES
 	var goalNumber = 0;
 	var userScore = 0;
 	var totalWins = 0;
@@ -9,7 +11,7 @@ $(document).ready(function() {
 	var gemThreeValue = 0;
 	var gemFourValue = 0;
 
-	// Audio Sounds
+	// AUDIO SOUNDS
 	var gemOneAudio = new Audio('https://www.freesound.org/data/previews/387/387647_3905081-lq.mp3');
 	var gemTwoAudio = new Audio('https://www.freesound.org/data/previews/387/387646_3905081-lq.mp3');
 	var gemThreeAudio = new Audio('https://www.freesound.org/data/previews/387/387645_3905081-lq.mp3');
@@ -18,41 +20,42 @@ $(document).ready(function() {
 	var gameLoser = new Audio('https://www.freesound.org/data/previews/387/387653_3905081-lq.mp3');
 
 
-
-	// Generates the Numbers We Need for the Game
+	// FUNCTION TO GENERATE THE NUMBERS WE NEED FOR THE GAME
 	function numGen() {
 
-		// Gets Random Number For Game Between 20 - 120
+		// CREATES RANDOM NUMBER BETWEEN 20-120
+		// THIS WILL BE THE GOAL NUMBER FOR THE GAME
 		function getRandomNumber() {
 		goalNumber = Math.floor(Math.random() * 100 + 20);
 		console.log(goalNumber);
 		$('#goal-number').html(goalNumber);
 		}
 
-		// Gives GemOne Value Between 1 - 3 For Gem One
+		// CREATES RANDOM NUMBER BETWEEN 1-3 FOR GEM ONE
 		function getGemOneValue() {
 		gemOneValue = Math.floor(Math.random() * 3 + 1);
 		console.log(gemOneValue);
 		}
 
-		// Gives GemTwo Value Between 4 - 6 For Gem Two
+		// CREATES RANDOM NUMBER BETWEEN 4-6 FOR GEM TWO
 		function getGemTwoValue() {
 		gemTwoValue = Math.floor(Math.random() * 3 + 4);
 		console.log(gemTwoValue);
 		}
 
-		// Gives GemThree Value Between 7 - 9 For Gem Three
+		// CREATES RANDOM NUMBER BETWEEN 7-9 FOR GEM THREE
 		function getGemThreeValue() {
 		gemThreeValue = Math.floor(Math.random() * 3 + 7);
 		console.log(gemThreeValue);
 		}
 
-		// Gives GemFour Value Between 10 - 12 Gem Four
+		// CREATES RANDOM NUMBER BETWEEN 10-12 FOR GEM FOUR
 		function getGemFourValue() {
 		gemFourValue = Math.floor(Math.random() * 3 + 10);
 		console.log(gemFourValue);
 		}
 
+		// CALLS ALL THE RANDOM NUMBER FUNCTIONS TO EXECUTE
 		getRandomNumber();
 		getGemOneValue();
 		getGemTwoValue();
@@ -60,48 +63,53 @@ $(document).ready(function() {
 		getGemFourValue();
 	}
 
+	// CALLS NUMGEN FUNCTION TO EXECUTE
 	numGen();
 
 
-	// Adds Value of Gem One to the Total User Score
+	// ADDS VALUE OF GEM ONE TO THE TOTAL USER SCORE
 	$('#gem-one').on('click', function() {
 		gemOneAudio.play();
 		userScore = userScore + gemOneValue;
 		console.log(userScore);
+		// DISPLAYS NEW SCORE ON PAGE
 		$('#user-score').html(userScore);
 		checkScore();
 	});
 
-	// Adds Value of Gem Two to the Total User Score
+	// ADDS VALUE OF GEM TWO TO THE TOTAL USER SCORE
 	$('#gem-two').on('click', function() {
 		gemTwoAudio.play();
 		userScore = userScore + gemTwoValue;
 		console.log(userScore);
+		// DISPLAYS NEW SCORE ON PAGE
 		$('#user-score').html(userScore);
 		checkScore();
 	});
 
-	// Adds Value of Gem Three to the Total User Score
+	// ADDS VALUE OF GEM THREE TO THE TOTAL USER SCORE
 	$('#gem-three').on('click', function() {
 		gemThreeAudio.play();
 		userScore = userScore + gemThreeValue;
 		console.log(userScore);
+		// DISPLAYS NEW SCORE ON PAGE
 		$('#user-score').html(userScore);
 		checkScore();
 	});
 
-	// Adds Value of Gem Four to the Total User Score
+	// ADDS VALUE OF GEM FOUR TO THE TOTAL USER SCORE
 	$('#gem-four').on('click', function() {
 		gemFourAudio.play();
 		userScore = userScore + gemFourValue;
 		console.log(userScore);
+		// DISPLAYS NEW SCORE ON PAGE
 		$('#user-score').html(userScore);
 		checkScore();
 	});
 
 
-	// Resets User Score and Generates New Numbers
-	// at the Beginning of a New Game
+	// RESETS USER SCORE AND GENERATES NEW NUMBERS
+	// AT THE BEGINNING OF A NEW GAME
 	function reset() {
 		userScore = 0;
 		$('#user-score').html(userScore);
@@ -109,19 +117,25 @@ $(document).ready(function() {
 	}
 	
 
-	// Checks the User Score Against the Goal Number
+	// CHECKS THE USER SCORE AGAINST THE GOAL NUMBER
 	function checkScore() {
+		// ADDS TO USER WINS AND CALLS RESET FUNCTION
+		// IF USER MATCHES THE EXACT GOAL NUMBER
 		if (userScore === goalNumber) {
 			gameWinner.play();
 			totalWins++;
 			console.log(totalWins);
+			// DISPLAYS TOTAL WINS ON PAGE
 			$('#user-wins').html(totalWins);
 			reset();
 		}
+		// ADDS TO USER LOSSES AND CALLS RESET FUNCTION
+		// IF USER GOES OVER THE GOAL NUMBER
 		if (userScore > goalNumber) {
 			gameLoser.play();
 			totalLosses++;
 			console.log(totalLosses);
+			// DISPLAYS TOTAL LOSSES ON PAGE
 			$('#user-losses').html(totalLosses);
 			reset();
 		}
