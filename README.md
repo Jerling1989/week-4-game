@@ -8,5 +8,6 @@ The rules of the game are very simple, at the start of each round there is a ran
 - Here you can see what the game looks like upon initial page load. There is the Game Title, Instructions, Gem Buttons, and the Goal Number for the round. You'll notice since this is the first round there are no Wins or Losses tracked and no User Score yet.
 ![INTRO](assets/images/read_me/intro.png)
 
+- This next image is here to show how the user's Wins, Losses and Current Score are tracked during thier session on the game.
 ![SESSION](assets/images/read_me/session.png)
 
