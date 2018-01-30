@@ -3,6 +3,7 @@ This is a simple yet fun game I made with HTML, CSS, and JavaScript. For the CSS
 
 The rules of the game are very simple, at the start of each round there is a randomly generated "Goal Number", this is the number the user wants to get to. Each one of the Gems will each have a random value at the start of each game as well. If the user matches the "Goal Number" exactly they win, if the go over the number they lose.
 
+---
 
 - Here you can see what the game looks like upon initial page load. There is the Game Title, Instructions, Gem Buttons, and the Goal Number for the round. You'll notice since this is the first round there are no Wins or Losses tracked and no User Score yet.
 ![INTRO](assets/images/read_me/intro.png)
